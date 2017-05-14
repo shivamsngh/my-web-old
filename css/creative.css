@@ -414,7 +414,25 @@ img::-moz-selection {
 body {
   webkit-tap-highlight-color: #222222;
 }
-.rss-item{
+div .rss-box ul li {
   list-style: none;
   text-align: left;
+  color: #777;
+}
+div .rss-box ul li a{
+  text-align: center !important;
+}
+.card{
+  /*border:1px solid darkgray;*/
+  box-shadow: 10px 10px 5px #888888;
+}
+.card-header{
+ border:1px solid darkgray;
+}
+.card-footer{
+ border:1px solid darkgray;
+}
+.card-block{
+ border:1px solid darkgray;
+ margin-bottom: auto;
 }

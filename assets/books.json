@@ -1,0 +1,133 @@
+{
+    "books": [
+        {
+            "book1": {
+                "title": "One night at call center",
+                "myrating": 6,
+                "author": "Chetan Bhagat",
+                "read": true
+            }
+        },
+        {
+            "book2": {
+                "title": "3 Mistakes of my life",
+                "myrating": 8,
+                "author": "Chetan Bhagat",
+                "read": true
+            }
+        },
+        {
+            "book3": {
+                "title": "A roller coaster Ride",
+                "myrating": 7,
+                "author": "Saumil Srivastav",
+                "read": true
+            }
+        },
+        {
+            "book4": {
+                "title": "Nothing For You My Dear Still I Love You",
+                "myrating": 6,
+                "author": "Arpit Dugar",
+                "read": true
+            }
+        },
+        {
+            "book5": {
+                "title": "Harry Potter and The order of Phoenix",
+                "myrating": 9,
+                "author": "J.K Rowling",
+                "read": true
+            }
+        },
+        {
+            "book6": {
+                "title": "Chanakya's Chant",
+                "myrating": 8,
+                "author": "Ashwin Sanghi",
+                "read": true
+            }
+        },
+        {
+            "book7": {
+                "title": "Immortals of Meluha",
+                "myrating": 9,
+                "author": "Amish Tripathi",
+                "read": true
+            }
+        },
+        {
+            "book8": {
+                "title": "The secret of Nagas",
+                "myrating": 8.5,
+                "author": "Amish Tripathi",
+                "read": true
+            }
+        },
+        {
+            "book9": {
+                "title": "The Oath of Vayuputras",
+                "myrating": 8,
+                "author": "Amish Tripathi",
+                "read": true
+            }
+        },
+        {
+            "book10": {
+                "title": "And then there were None",
+                "myrating": 9,
+                "author": "Agatha Christie",
+                "read": true
+            }
+        },
+        {
+            "book11": {
+                "title": "A Passage to India",
+                "myrating": 9,
+                "author": "E.M Forster",
+                "read": true
+            }
+        },
+        {
+            "book12": {
+                "title": "Alexander's Secret",
+                "myrating": 9,
+                "author": "Chrishtopher C. Doyle",
+                "read": true
+            }
+        },
+        {
+            "book13": {
+                "title": "The Secret of Druids",
+                "myrating": 9,
+                "author": "Chrishtopher C. Doyle",
+                "read": true
+            }
+        },
+        {
+            "book14": {
+                "title": "Pakistan Before and After Osama",
+                "myrating": 8.5,
+                "author": "Imtiaz Gul",
+                "read": true
+            }
+        },
+        {
+            "book15": {
+                "title": "Afghanistan-The Bear Trap",
+                "myrating": 8.5,
+                "author": "Brigadier Mohd Yusuf & Mark Adkin",
+                "read": false
+            }
+        },
+        {
+            "book16": {
+                "title": "And the Mountains Echoed",
+                "myrating": 10,
+                "author": "Khaled Hosseini",
+                "read": true
+            }
+        }
+
+    ]
+}

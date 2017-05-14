@@ -55,13 +55,16 @@
 						<a class="page-scroll" href="#about">About</a>
 					</li>
 					<li>
-						<a class="page-scroll" href="#services">Blog</a>
+						<a class="page-scroll" href="#services">Social</a>
 					</li>
 					<li>
 						<a class="page-scroll" href="#portfolio">Portfolio</a>
 					</li>
 					<li>
 						<a class="page-scroll" href="#contact">Contact</a>
+					</li>
+					<li>
+						<a class="page-scroll" href="assets/cv-shivamsingh.pdf" target="_blank">Resume</a>
 					</li>
 				</ul>
 			</div>
@@ -98,7 +101,7 @@
 					<hr class="light">
 					<p class="text-faded">Open Source Innovation, AI, Machine Learning, Modern Web Development, Progressive Web Apps. Apart from my profession
 						I take keen interest in Defence Technologies and Strategy discussions.</p>
-					<a href="#services" class="page-scroll btn btn-default btn-xl sr-button">Get Started!</a>
+					<a href="#services" class="page-scroll btn btn-default btn-xl sr-button">Know More!</a>
 				</div>
 			</div>
 		</div>
@@ -108,7 +111,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12 text-center">
-					<h2 class="section-heading">Blogs</h2>
+					<h2 class="section-heading">Social</h2>
 					<hr class="primary">
 				</div>
 			</div>
@@ -118,7 +121,7 @@
 				<div class="col-lg-4 col-md-8 text-center">
 					<div class="service-box">
 						<i class="fa fa-4x fa-rss text-primary sr-icons"></i>
-						<h3></h3>
+						<h3>Blog</h3>
 						<!--<p class="text-muted">Our templates are updated regularly so they don't break.</p>-->
 						<!--<iframe src="https://shivamsngh.blogspot.in/" frameborder="0"></iframe>-->
 						<p class="text-muted">
@@ -130,9 +133,6 @@
 								<a href="https://feed2js.org//feed2js.php?src=https%3A%2F%2Fshivamsngh.blogspot.in%2Fatom.xml&num=2&desc=50&targ=y&utf=y&pc=y&html=y">View RSS feed</a>
 							</noscript>
 
-
-
-
 							<!--/FeedJS code-->
 						</p>
 					</div>
@@ -143,16 +143,35 @@
 						<!--<h3>Ready to Ship</h3>
 						<p class="text-muted">You can use this theme as is, or you can make changes!</p>-->
 						<!--Twitter Feed-->
-						<h3></h3>
-						<a class="twitter-timeline" data-height="250" href="https://twitter.com/sshivamsngh">Tweets by sshivamsngh</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+						<h3>Tweets</h3>
+						<a class="twitter-timeline" data-height="250" href="https://twitter.com/sshivamsngh">Tweets by sshivamsngh</a>
+						<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 						<!--Twitter Feed-->
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-8 text-center">
 					<div class="service-box">
-						<i class="fa fa-4x fa-newspaper-o text-primary sr-icons"></i>
-						<h3>Up to Date</h3>
-						<p class="text-muted">We update dependencies to keep things fresh.</p>
+						<i class="fa fa-4x fa-book text-primary sr-icons"></i>
+						<h3>Latest Reads</h3>
+						
+						<!--Book Card-->
+						<div class="card text-center">
+							<div class="card-header">
+								<h4 id="bookname"></h4>
+							</div>
+							<div class="card-block">
+
+								<h5 class="text-muted"id="author"></h5>
+								<p class="card-text"></p>
+								<p id="myrating"></p>
+								<a href="#" class="btn btn-primary">View All Reads</a>
+							</div>
+							<div class="card-footer text-muted">
+								<p id="bookcount"></p>
+							</div>
+						</div>
+						<!--/Book Card-->
+
 					</div>
 				</div>
 				<!--<div class="col-lg-3 col-md-6 text-center">
@@ -278,8 +297,7 @@
 				<div class="col-lg-8 col-lg-offset-2 text-center">
 					<h2 class="section-heading">Let's Get In Touch!</h2>
 					<hr class="primary">
-					<p>Ready to start your next project with me? That's great! Give a call or send an email and I will get back to you as soon
-						as possible!</p>
+					<p>Up for a discussion? That's great! Give a call or send an email and I will get back to you as soon as possible!</p>
 				</div>
 				<div class="col-lg-4 col-lg-offset-2 text-center">
 					<i class="fa fa-phone fa-3x sr-contact"></i>
@@ -296,6 +314,7 @@
 
 	<!-- jQuery -->
 	<script src="vendor/jquery/jquery.min.js"></script>
+	<script src="js/app.js"></script>
 
 	<!-- Bootstrap Core JavaScript -->
 	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
