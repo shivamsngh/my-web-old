@@ -1,0 +1,23 @@
+{
+  "name": "shivamsngh.github.io",
+  "description": "My personal website",
+  "main": "index.html",
+  "authors": [
+    "Shivam Singh"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "Shivam",
+    "Singh",
+    "Shivam"
+  ],
+  "homepage": "https://shivamsngh.github.io",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
