@@ -9,7 +9,7 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 
-	<title>My Web| Shivam Singh</title>
+	<title>My Web | Shivam Singh</title>
 	<link rel="shortcut icon" type="image/png" href="img/favicon.png" />
 	<!-- Bootstrap Core CSS -->
 	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -158,14 +158,16 @@
 						<!--Book Card-->
 						<div class="card text-center">
 							<div class="card-header">
-								<h4 id="bookname"></h4>
+								<h4 id="currentBook"></h4>
 							</div>
 							<div class="card-block">
 
-								<h5 class="text-muted" id="author"></h5>
-								<p class="card-text"></p>
-								<p id="myrating"></p>
-								<a href="#" class="btn btn-primary">View All Reads</a>
+								<h5 class="text-muted" id="currentAuthor"></h5>
+								<h5 class="card-text" id="currentRead"></h5>
+								<h6 style="color:green" id="currentRating"></h6>
+								<!--<a href="#" class="btn btn-primary">View All Reads</a>-->
+								<!-- Trigger the modal with a button -->
+								<button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#myModal">View All Reads</button>
 							</div>
 							<div class="card-footer text-muted">
 								<p id="bookcount"></p>
@@ -312,6 +314,47 @@
 		</div>
 	</section>
 
+	<!--Modal Start-->
+	<div class="container">
+		<!-- Modal -->
+		<div class="modal fade" id="myModal" role="dialog">
+			<div class="modal-dialog">
+
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Books so far</h4>
+					</div>
+					<div class="modal-body">
+						<template id="book-template">
+							<div id="card-template">
+								<div class="card text-center">
+									<div class="card-header">
+										<h4 class="bookname"></h4>
+									</div>
+									<div class="card-block">
+
+										<h5 class="text-muted" id="author"></h5>
+										<h5 class="card-text"></h5>
+										<h6 style="color:green" id="myrating"></h6>
+									</div>
+									<div class="card-footer text-muted">
+										<p id="bookcount"></p>
+									</div>
+								</div>
+							</div>
+						</template>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<!--odal end-->
 
 	<!-- jQuery -->
 	<script src="vendor/jquery/jquery.min.js"></script>

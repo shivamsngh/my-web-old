@@ -134,39 +134,44 @@ function myBooks() {
     });
 }
 
-function setAuthor(item) {
-    // console.log(item);
-    // $('#author').text(item.author);
+/**
+ * Set all read books in the modal.
+ */
+function setAllReads(item) {
+    //select the template
+    var bookTemplate = document.querySelector('#book-template');
+    //select all the nodes for editing values
+    let allH5 = bookTemplate.content.querySelectorAll('h5');
+    let allH4 = bookTemplate.content.querySelectorAll('h4');
+    let allH6 = bookTemplate.content.querySelectorAll('h6');
+    //set values
+    allH4[0].innerHTML = item.title;
+    allH5[0].innerHTML = "By- "+item.author;
+    //set currently reading attribute
+    if (!item.read) {
+        allH5[1].innerHTML = "Currently Reading";
+    }
+    else {
+        allH5[1].innerHTML = "Completed";
+    }
+    allH6[0].innerHTML = "My Rating: "+item.myrating;
+
+    // Clone the new row and insert it into the table
+    var bookcard = document.querySelector('.modal-body');
+    var book = document.importNode(bookTemplate.content, true);
+    bookcard.appendChild(book);
     return item;
 }
-function setTitle(item) {
-    console.log(item);
-    // $('#bookname').text(item.title);
-    return item;
-}
-function setStatus(item) {
-    // console.log(item);
-    // $('.card-text').text("Currently Reading");
-    return item;
-}
-function setRating(item) {
-    // console.log(item);
-    // $('#myrating').text(item.myrating);
-    return item;
-}
+
 function setCurrentlyReading(item) {
     if (!item.read) {
-        $('#author').text(`By- ${item.author}`);
-        $('#bookname').text(item.title);
-        $('.card-text').text("Currently Reading");
-        $('#myrating').text(`My rating: ${item.myrating}`);
+        $('#currentAuthor').text(`By- ${item.author}`);
+        $('#currentBook').text(item.title);
+        $('#currentRead').text("Currently Reading");
+        $('#currentRating').text(`My rating: ${item.myrating}`);
         $('#bookcount').text(`Book Count: ${mybooks.books.length}`)
     }
-      return item;
+    return item;
 }
-mybooks.books.map(setCurrentlyReading).map(setAuthor).map(setTitle).map(setStatus).map(setRating);
-// $(document).ready(()=>{
-
-// $("#bookname").text();
-// });
+mybooks.books.map(setCurrentlyReading).map(setAllReads);
 
