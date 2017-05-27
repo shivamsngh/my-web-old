@@ -128,7 +128,32 @@ function myBooks() {
                 "author": "Khaled Hosseini",
                 "read": true
 
+            },
+            {
+                "title": "I too had a love story",
+                "myrating": 8.5,
+                "author": "Ravinder Singh",
+                "read": true
+            },
+            {
+                "title": "The Murder of Roger Ackroyd",
+                "myrating": 0.0,
+                "author": "Agatha Christie",
+                "read": undefined
+            },
+            {
+                "title": "Breaking India: Western Interventions in Dravidian and Dalit Faultlines",
+                "myrating": 0.0,
+                "author": "Rajiv Malhotra",
+                "read": undefined
+            },
+            {
+                "title": "Sita - Warrior of Mithila",
+                "myrating": 0.0,
+                "author": "Amish Tripathi",
+                "read": undefined
             }
+
 
         ]
     });
@@ -146,15 +171,18 @@ function setAllReads(item) {
     let allH6 = bookTemplate.content.querySelectorAll('h6');
     //set values
     allH4[0].innerHTML = item.title;
-    allH5[0].innerHTML = "By- "+item.author;
+    allH5[0].innerHTML = "By- " + item.author;
     //set currently reading attribute
-    if (!item.read) {
+    if (item.read===false) {
         allH5[1].innerHTML = "Currently Reading";
+    }
+    else if(item.read===undefined){
+        allH5[1].innerHTML = "Yet to start.";
     }
     else {
         allH5[1].innerHTML = "Completed";
     }
-    allH6[0].innerHTML = "My Rating: "+item.myrating;
+    allH6[0].innerHTML = "My Rating: " + item.myrating;
 
     // Clone the new row and insert it into the table
     var bookcard = document.querySelector('.modal-body');
@@ -164,7 +192,7 @@ function setAllReads(item) {
 }
 
 function setCurrentlyReading(item) {
-    if (!item.read) {
+    if (!item.read && item.read!==undefined) {
         $('#currentAuthor').text(`By- ${item.author}`);
         $('#currentBook').text(item.title);
         $('#currentRead').text("Currently Reading");
