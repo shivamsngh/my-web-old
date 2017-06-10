@@ -10,6 +10,10 @@
         event.preventDefault();
     });
 
+    $(".project-name").click(()=>{
+       let win = window.open('http://stackoverflow.com/', '_blank');
+    })
+
     // Highlight the top nav as scrolling occurs
     $('body').scrollspy({
         target: '.navbar-fixed-top',
