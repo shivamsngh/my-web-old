@@ -1,5 +1,4 @@
-var mybooks = myBooks();
-function myBooks() {
+var mybooks = function (){
     return ({
         "books": [
 
@@ -148,10 +147,16 @@ function myBooks() {
                 "read": undefined
             },
             {
-                "title": "Sita - Warrior of Mithila",
-                "myrating": 0.0,
+                "title": "Scion of Ikshavaku",
+                "myrating": 9,
                 "author": "Amish Tripathi",
-                "read": undefined
+                "read": true
+            },
+            {
+                "title": "Sita - Warrior of Mithila",
+                "myrating": 9,
+                "author": "Amish Tripathi",
+                "read": true
             }
 
 
