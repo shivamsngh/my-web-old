@@ -1,4 +1,5 @@
-var mybooks = function (){
+var mybooks = myBooks();
+function myBooks() {
     return ({
         "books": [
 
