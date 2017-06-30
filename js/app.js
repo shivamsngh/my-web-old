@@ -118,7 +118,7 @@ function myBooks() {
                 "title": "Afghanistan-The Bear Trap",
                 "myrating": 8.5,
                 "author": "Brigadier Mohd Yusuf & Mark Adkin",
-                "read": false
+                "read": true
 
             },
             {
@@ -139,7 +139,7 @@ function myBooks() {
                 "title": "The Murder of Roger Ackroyd",
                 "myrating": 0.0,
                 "author": "Agatha Christie",
-                "read": undefined
+                "read": false
             },
             {
                 "title": "Breaking India: Western Interventions in Dravidian and Dalit Faultlines",
