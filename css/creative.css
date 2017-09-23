@@ -436,3 +436,10 @@ div .rss-box ul li a{
  border:1px solid darkgray;
  margin-bottom: auto;
 }
+.bucketlist{
+  float: right;
+  width:33%;
+  border:1px solid white;
+  border-radius: 1;
+
+}
