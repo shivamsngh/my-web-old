@@ -1,169 +1,11 @@
+/**
+ * A very good example of fucitonal programming below where even initialization is done by 
+ * fucntions which makes the arrays immutable.
+ * Then a good example of using query selector. 
+ * It is pure javascript.
+ * And yes I am not an expert. :)
+ */
 var mybooks = myBooks();
-function myBooks() {
-    return ({
-        "books": [
-
-            {
-                "title": "One night at call center",
-                "myrating": 6,
-                "author": "Chetan Bhagat",
-                "read": true
-            }
-            ,
-            {
-                "title": "3 Mistakes of my life",
-                "myrating": 8,
-                "author": "Chetan Bhagat",
-                "read": true
-
-            },
-            {
-
-                "title": "A roller coaster Ride",
-                "myrating": 7,
-                "author": "Saumil Srivastav",
-                "read": true
-            }
-            ,
-            {
-
-                "title": "Nothing For You My Dear Still I Love You",
-                "myrating": 6,
-                "author": "Arpit Dugar",
-                "read": true
-            }
-            ,
-            {
-
-                "title": "Harry Potter and The order of Phoenix",
-                "myrating": 9,
-                "author": "J.K Rowling",
-                "read": true
-            }
-            ,
-            {
-
-                "title": "Chanakya's Chant",
-                "myrating": 8,
-                "author": "Ashwin Sanghi",
-                "read": true
-
-            },
-            {
-
-                "title": "Immortals of Meluha",
-                "myrating": 9,
-                "author": "Amish Tripathi",
-                "read": true
-            }
-            ,
-            {
-
-                "title": "The secret of Nagas",
-                "myrating": 8.5,
-                "author": "Amish Tripathi",
-                "read": true
-            }
-            ,
-            {
-
-                "title": "The Oath of Vayuputras",
-                "myrating": 8,
-                "author": "Amish Tripathi",
-                "read": true
-
-            },
-            {
-
-                "title": "And then there were None",
-                "myrating": 9,
-                "author": "Agatha Christie",
-                "read": true
-
-            },
-            {
-
-                "title": "A Passage to India",
-                "myrating": 9,
-                "author": "E.M Forster",
-                "read": true
-
-            },
-            {
-
-                "title": "Alexander's Secret",
-                "myrating": 9,
-                "author": "Chrishtopher C. Doyle",
-                "read": true
-
-            },
-            {
-
-                "title": "The Secret of Druids",
-                "myrating": 9,
-                "author": "Chrishtopher C. Doyle",
-                "read": true
-
-            },
-            {
-
-                "title": "Pakistan Before and After Osama",
-                "myrating": 8.5,
-                "author": "Imtiaz Gul",
-                "read": true
-
-            },
-            {
-
-                "title": "Afghanistan-The Bear Trap",
-                "myrating": 8.5,
-                "author": "Brigadier Mohd Yusuf & Mark Adkin",
-                "read": true
-
-            },
-            {
-
-                "title": "And the Mountains Echoed",
-                "myrating": 10,
-                "author": "Khaled Hosseini",
-                "read": true
-
-            },
-            {
-                "title": "I too had a love story",
-                "myrating": 8.5,
-                "author": "Ravinder Singh",
-                "read": true
-            },
-            {
-                "title": "The Murder of Roger Ackroyd",
-                "myrating": 0.0,
-                "author": "Agatha Christie",
-                "read": false
-            },
-            {
-                "title": "Breaking India: Western Interventions in Dravidian and Dalit Faultlines",
-                "myrating": 0.0,
-                "author": "Rajiv Malhotra",
-                "read": undefined
-            },
-            {
-                "title": "Scion of Ikshavaku",
-                "myrating": 9,
-                "author": "Amish Tripathi",
-                "read": true
-            },
-            {
-                "title": "Sita - Warrior of Mithila",
-                "myrating": 9,
-                "author": "Amish Tripathi",
-                "read": true
-            }
-
-
-        ]
-    });
-}
 
 /**
  * Set all read books in the modal.
@@ -179,10 +21,10 @@ function setAllReads(item) {
     allH4[0].innerHTML = item.title;
     allH5[0].innerHTML = "By- " + item.author;
     //set currently reading attribute
-    if (item.read===false) {
+    if (item.read === false) {
         allH5[1].innerHTML = "Currently Reading";
     }
-    else if(item.read===undefined){
+    else if (item.read === undefined) {
         allH5[1].innerHTML = "Yet to start.";
     }
     else {
@@ -198,7 +40,7 @@ function setAllReads(item) {
 }
 
 function setCurrentlyReading(item) {
-    if (!item.read && item.read!==undefined) {
+    if (!item.read && item.read !== undefined) {
         $('#currentAuthor').text(`By- ${item.author}`);
         $('#currentBook').text(item.title);
         $('#currentRead').text("Currently Reading");
@@ -207,5 +49,6 @@ function setCurrentlyReading(item) {
     }
     return item;
 }
+mybooks.books.reverse();
 mybooks.books.map(setCurrentlyReading).map(setAllReads);
 
