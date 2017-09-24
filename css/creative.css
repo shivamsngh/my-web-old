@@ -49,6 +49,9 @@ p {
   background-color: #222222;
   color: white;
 }
+.bg-cream{
+  background-color:#ECC8A6;
+}
 .text-faded {
   color: rgba(255, 255, 255, 0.7);
 }
@@ -441,5 +444,61 @@ div .rss-box ul li a{
   width:33%;
   border:1px solid white;
   border-radius: 1;
+}
+.tri-right.border.left-top:before {
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: -40px;
+  right: auto;
+  top: -8px;
+  bottom: auto;
+  border: 32px solid;
+  border-color: #666 transparent transparent transparent;
+}
+.tri-right.left-top:after{
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: -20px;
+  right: auto;
+  top: 0px;
+  bottom: auto;
+  border: 22px solid;
+  border-color: rgba(255, 81, 33,0.6) transparent transparent transparent;
+}
+.event-bubble {
+  margin: 10px 10px 0px 10px;
+  display: inline-block;
+  position: relative;
+  width: 75%;
+  height: auto;
+  background-color: rgba(255, 81, 33,0.2);
+}
+.eventtext{
+  padding: 1em;
+    text-align: left;
+  line-height: 1.5em;
+  color:#C9C7C5;
+}
+.eventtext .eventtext-header{
+    width:100%;
+    height: 10%;
+    color:white;
+  /* background-color: rgba(255, 81, 33,1); */
+}
+.eventtext p{
+  /* remove webkit p margins */
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
+}
 
+.side-bar{
+  display: block;
+  width: 25%;
+  position: absolute;
+  top: 50px;
+text-align: left;
 }

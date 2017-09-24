@@ -49,6 +49,5 @@ function setCurrentlyReading(item) {
     }
     return item;
 }
-mybooks.books.reverse();
-mybooks.books.map(setCurrentlyReading).map(setAllReads);
+
 
