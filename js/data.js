@@ -173,7 +173,7 @@ function newEventsAndConferences() {
                 link: `https://ghcindia.anitaborg.org`,
                 startDate: Date.parse('16 Nov 2017'),
                 endDare: Date.parse('17 Nov 2017'),
-                capacity:`Speaker`
+                capacity: `Speaker`
             },
             {
                 eventName: 'GAIB 2017',
@@ -181,7 +181,30 @@ function newEventsAndConferences() {
                 link: `https://allevents.in/events/ai-bootcamp-2017-gurgaon/1404087219704510`,
                 startDate: Date.parse('23 Sep 2017'),
                 endDare: Date.parse('23 Sep 2017'),
+<<<<<<< HEAD
                 capacity:`Attendee` 
+=======
+                capacity: `Attendee`
+            }
+        ]
+    });
+}
+
+function myBucketList() {
+    return ({
+        listItems: [
+            {
+                name: 'Bungee Jump',
+                jumpsStats: [{
+                    height: '83 meters',
+                    photoUrls: [],
+                    mapLocation: `https://www.google.co.in/maps/place/Jumpin+Heights+Bungee+Bridge/@30.0631978,78.3983181,17z/data=!4m8!1m2!2m1!1sbungee+jump+rishikesh!3m4!1s0x0:0xe54fb3f1ebbb275a!8m2!3d30.0631978!4d78.3983181`,
+                    place: 'Rishikesh, Uttarakhand, India',
+                    jumpDate: "Sep 30, 2017",
+                    blogFile: ''
+                }],
+                completed: false
+>>>>>>> 84b47c41ad2f984b8d9f6f18ef63339cd3b7b910
             }
         ]
     });
