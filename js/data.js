@@ -178,10 +178,10 @@ function newEventsAndConferences() {
             {
                 eventName: 'GAIB 2017',
                 details: 'Attended Artificial Intelligence Bootcamp India 2017, Microsoft, Gurgaon on 23rd September 2017',
-                link: `https://https://allevents.in/events/ai-bootcamp-2017-gurgaon/1404087219704510`,
+                link: `https://allevents.in/events/ai-bootcamp-2017-gurgaon/1404087219704510`,
                 startDate: Date.parse('23 Sep 2017'),
                 endDare: Date.parse('23 Sep 2017'),
-                capacity:`Attendee`
+                capacity:`Attendee` 
             }
         ]
     });
