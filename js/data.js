@@ -181,9 +181,6 @@ function newEventsAndConferences() {
                 link: `https://allevents.in/events/ai-bootcamp-2017-gurgaon/1404087219704510`,
                 startDate: Date.parse('23 Sep 2017'),
                 endDare: Date.parse('23 Sep 2017'),
-<<<<<<< HEAD
-                capacity:`Attendee` 
-=======
                 capacity: `Attendee`
             }
         ]
@@ -204,7 +201,6 @@ function myBucketList() {
                     blogFile: ''
                 }],
                 completed: false
->>>>>>> 84b47c41ad2f984b8d9f6f18ef63339cd3b7b910
             }
         ]
     });
