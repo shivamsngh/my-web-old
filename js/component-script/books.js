@@ -1,11 +1,23 @@
-/**
- * A very good example of fucitonal programming below where even initialization is done by 
- * fucntions which makes the arrays immutable.
- * Then a good example of using query selector. 
- * It is pure javascript.
- * And yes I am not an expert. :)
- */
-var mybooks = myBooks();
+var allBooks = myBooks();
+initializeBookModal();
+
+function initializeBookModal() {
+    console.log(allBooks);
+    allBooks.reverse();
+    allBooks.map(setCurrentlyReading).map(setAllReads);
+}
+
+
+function setCurrentlyReading(item) {
+    if (!item.read && item.read !== null) {
+        $('#currentAuthor').text(`By- ${item.author}`);
+        $('#currentBook').text(item.title);
+        $('#currentRead').text("Currently Reading");
+        $('#currentRating').text(`My rating: ${item.myrating}`);
+        $('#bookcount').text(`Book Count: ${allBooks.length}`)
+    }
+    return item;
+}
 
 /**
  * Set all read books in the modal.
@@ -38,16 +50,4 @@ function setAllReads(item) {
     bookcard.appendChild(book);
     return item;
 }
-
-function setCurrentlyReading(item) {
-    if (!item.read && item.read !== undefined) {
-        $('#currentAuthor').text(`By- ${item.author}`);
-        $('#currentBook').text(item.title);
-        $('#currentRead').text("Currently Reading");
-        $('#currentRating').text(`My rating: ${item.myrating}`);
-        $('#bookcount').text(`Book Count: ${mybooks.books.length}`)
-    }
-    return item;
-}
-
 

@@ -1,9 +1,7 @@
 function _bindRecentData() {
-    // this.initializeRecentComponent((recentTemplate) => {
-    //     this.setRecentTemplateOnUI(recentTemplate);
-    // })
+    console.log("Binding recent cards")
     let recentEventsData = newEventsAndConferences();
-    recentEventsData.events.map(data => this.setRecentTemplateOnUI(this.initializeRecentComponent(data)));
+    recentEventsData.map(data => this.setRecentTemplateOnUI(this.initializeRecentComponent(data)));
 
 }
 

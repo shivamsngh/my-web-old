@@ -162,6 +162,9 @@ header {
   text-align: center;
   color: white;
 }
+header.blogPage{
+  background-image: url('../img/bungy/head.jpg');
+}
 header .header-content {
   position: relative;
   text-align: center;
@@ -502,3 +505,23 @@ div .rss-box ul li a{
   top: 50px;
 text-align: left;
 }
+
+/* Blog CSS's */
+.outer-box{
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  border: 1px solid black;
+  font-family: Courier New, Courier, monospace;
+  font-weight: bold;
+}
+.inner-box{
+  display: inline-block;
+  width: 90%;
+  height: 80%;
+  max-width: 300px;
+  min-height: 400px;
+  padding: 2%;
+  border: 1px solid black;
+}
+
