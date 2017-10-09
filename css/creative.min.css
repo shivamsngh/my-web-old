@@ -66,6 +66,7 @@ text-align: left;
     width:100%;
     display: inline-flex;
     flex-direction: row;
+    color:white;
   }
   .outer-box{
     width: 50%;
@@ -83,8 +84,16 @@ text-align: left;
   padding: 2px;
 }
   .blogpagenav{
-background: #F05F40;
+/* background: #F05F40; */
+/* background: rgba(255, 81, 33, 0.95) */
+background: rgb(93,159,183);
   }
   header.blogPage{
     background-image: url('../img/bungy/thesuspension.png');
+  }
+
+  section.blog-footer{
+    background-image: url('../img/bungy/header.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
   }

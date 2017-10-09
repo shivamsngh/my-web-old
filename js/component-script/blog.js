@@ -14,7 +14,7 @@ function initializeBlogComponent(data, index) {
     let detail = blogTemplate.content.querySelector('p');
     let timeStamp = blogTemplate.content.querySelector('sub');
     let img = blogTemplate.content.querySelector('img');
-    blogCard.style.background = "orange";
+    blogCard.style.background = "rgba(93,159,183,0.7)";
     caption.innerHTML = data.caption;
     quote.innerHTML = `<i>${data.quote}</i>`;
     detail.innerHTML = data.detail;
