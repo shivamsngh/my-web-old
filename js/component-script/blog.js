@@ -10,13 +10,13 @@ function initializeBlogComponent(data, index) {
     let blogTemplate = document.querySelector('#photo-container');
     let blogCard = blogTemplate.content.querySelector('.photo-grid');
     let caption = blogTemplate.content.querySelector('h2');
-    let quote = blogTemplate.content.querySelector('h4');
-    let detail = blogTemplate.content.querySelector('p');
+    let quote = blogTemplate.content.querySelectorAll('h4')[0];
+    let detail = blogTemplate.content.querySelectorAll('h4')[1];
     let timeStamp = blogTemplate.content.querySelector('sub');
     let img = blogTemplate.content.querySelector('img');
     blogCard.style.background = "rgba(93,159,183,0.7)";
     caption.innerHTML = data.caption;
-    quote.innerHTML = `<i>${data.quote}</i>`;
+    quote.innerHTML = `<i class="fa fa-quote-left" aria-hidden="true"></i><i> ${data.quote} </i><i class="fa fa-min fa-quote-right" aria-hidden="true"></i>`;
     detail.innerHTML = data.detail;
     timeStamp.innerHTML = data.timeStamp;
     img.src=`../img/bungy/${data.photoId}`;

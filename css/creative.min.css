@@ -68,11 +68,25 @@ text-align: left;
     flex-direction: row;
     color:white;
   }
+  @media (max-width:480px){
+    .photo-grid{
+      flex-direction: column;
+    }
+.photo-full{
+  order:1 !important;
+}
+.photo-detail{
+  order:2 !important;
+}
+    .outer-box{
+      width:100% !important;
+    }
+  }
   .outer-box{
     width: 50%;
     text-align: center;
-    font-family: Courier New, Courier, monospace;
-    font-weight: bold;
+    font-family: Merriweather,'Helvetica Neue',Arial,sans-serif;
+    /* font-weight: bold; */
   }
 
   div.inner-box img{
@@ -81,7 +95,7 @@ text-align: left;
   }
 .photo-detail{
   display: grid;
-  padding: 2px;
+  padding: 12px;
 }
   .blogpagenav{
 /* background: #F05F40; */
