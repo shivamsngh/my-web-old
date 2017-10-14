@@ -81,7 +81,7 @@
     overflow: hidden;
   } */
 
-  @media (max-width:480px){
+  @media (max-width:1064px){
     .photo-grid{
       flex-direction: column;
     }

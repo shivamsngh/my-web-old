@@ -7,7 +7,7 @@ function addEventListenersOnBgVideo() {
     const playBtn = document.querySelector('a#playbtn');
     const videodiv = document.querySelector('div#jumpvideo');
     console.log(playBtn);
-    playBtn.addEventListener('click',() => {
+    playBtn.addEventListener('click', () => {
         console.log('clicked');
         videodiv.style.display = 'block';
         video.play();
@@ -25,9 +25,10 @@ function addEventListenersOnBgVideo() {
 
 function _bindRecentBlogData() {
     let recentBlogData = myBucketList();
+    let location = document.querySelector('a#bungyloc');
+    location.href = recentBlogData[0].jumpsStats[0].mapLocation;
     photoData = recentBlogData[0].jumpsStats[0].allPhotoBlogData;
-    recentBlogData[0].jumpsStats[0].allPhotoBlogData
-        .map((data, index) => this.setBlogTemplateOnUI(this.initializeBlogComponent(data), index));
+    photoData.map((data, index) => this.setBlogTemplateOnUI(this.initializeBlogComponent(data), index));
 }
 
 function initializeBlogComponent(data, index) {
@@ -43,7 +44,7 @@ function initializeBlogComponent(data, index) {
     quote.innerHTML = `<i class="fa fa-quote-left" aria-hidden="true"></i><i> ${data.quote} </i><i class="fa fa-min fa-quote-right" aria-hidden="true"></i>`;
     detail.innerHTML = data.detail;
     timeStamp.innerHTML = data.timeStamp;
-    img.src = `../img/bungy/${data.photoId}`;
+    img.src = `../img/bungy/optimized/${data.photoId}`;
     return blogTemplate;
 }
 
