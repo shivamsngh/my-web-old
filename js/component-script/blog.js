@@ -1,4 +1,28 @@
 var photoData;
+// add event listeners on video
+addEventListenersOnBgVideo();
+
+function addEventListenersOnBgVideo() {
+    const video = document.querySelector('div video');
+    const playBtn = document.querySelector('a#playbtn');
+    const videodiv = document.querySelector('div#jumpvideo');
+    console.log(playBtn);
+    playBtn.addEventListener('click',() => {
+        console.log('clicked');
+        videodiv.style.display = 'block';
+        video.play();
+    });
+    video.addEventListener('ended', () => {
+        videodiv.style.display = 'none';
+    });
+
+}
+
+// function removeVideo() {
+//     const video = document.querySelector('div#jumpvideo');
+//     video.style.display = 'none';
+// }
+
 function _bindRecentBlogData() {
     let recentBlogData = myBucketList();
     photoData = recentBlogData[0].jumpsStats[0].allPhotoBlogData;
@@ -19,7 +43,7 @@ function initializeBlogComponent(data, index) {
     quote.innerHTML = `<i class="fa fa-quote-left" aria-hidden="true"></i><i> ${data.quote} </i><i class="fa fa-min fa-quote-right" aria-hidden="true"></i>`;
     detail.innerHTML = data.detail;
     timeStamp.innerHTML = data.timeStamp;
-    img.src=`../img/bungy/${data.photoId}`;
+    img.src = `../img/bungy/${data.photoId}`;
     return blogTemplate;
 }
 
