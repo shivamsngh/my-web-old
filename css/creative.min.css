@@ -119,7 +119,7 @@
 background: rgb(93,159,183);
   }
   header.blogPage{
-    background-image: url('../img/bungy/optimized/thesuspension.png');
+    background-image: url('../img/bungy/optimized/thesuspension_0.jpg');
   }
 
   section.blog-footer{
@@ -135,7 +135,7 @@ background: rgb(93,159,183);
     min-height: 100%;
     width: auto;
     height: auto;
-    background: url('../img/bungy/optimized/thesuspension.png') no-repeat;
+    background: url('../img/bungy/optimized/thesuspension_0.jpg') no-repeat;
     background-size: cover;
     transition: 1s opacity;
   }
