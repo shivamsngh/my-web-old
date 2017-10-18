@@ -10,7 +10,7 @@
     <meta name="author" content="Shivam Singh">
     <meta name="keyword" content="research, gurgaon, gurugram, artificial intelligence, AI, machine learning, ML, human computer intearction, HCI, accenture, computing, accenture labs, software, developer, india, design, sos hermann, hgs, hyderabad, cybercity, delhi, varanasi, engineer, reader, foodie, food, analyst, internet of things, blockchain">
 
-    <title>My Blog | Shivam Singh - Research, Artificial Intelligence, Human Computer Interaction, Travel, Bucketlist, Food </title>
+    <title>Shivam Singh | My Blog - Research, Artificial Intelligence, Human Computer Interaction, Travel, Bucketlist, Food </title>
     <link rel="shortcut icon" type="image/png" href="../img/favicon.png" />
     <!-- Bootstrap Core CSS -->
     <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -75,13 +75,22 @@
         <!-- /.container-fluid -->
     </nav>
     <header class="blogPage">
+        <div id="jumpvideo">
+            <video poster="../img/bungy/optimized/thesuspension_0.jpg" onended="removevideo()" id="bgvid" playsinline muted>
+                <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
+                <source src="../assets/video/leapofaplutonian.mp4" type="video/mp4">
+            </video>
+        </div>
         <div class="header-content">
             <div class="header-content-inner">
                 <h1>Rishikesh</h1>
                 <hr>
                 <p>Bungy Jump | 83 mts | Highest in India</p>
-                <a href="https://www.twitter.com/sshivamsngh" target="_blank" class="btn btn-social-icon btn-map">
-                    <span class="fa fa-4x fa-map-marker"></span>
+                <a id="bungyloc" href="#" target="_blank" class="btn btn-social-icon btn-map">
+                        <span class="fa fa-4x fa-map-marker"></span>
+                    </a>
+                <a href="#" id="playbtn" class="btn btn-social-icon btn-play">
+                    <span class="fa fa-3x fa-film"></span>
                 </a>
             </div>
         </div>
@@ -101,12 +110,12 @@
             <div class="photo-detail outer-box">
                 <h2>Caption</h2>
                 <h4>Quote</h4>
-                <p>Detail</p>
+                <h4>Detail</h4>
                 <sub>TimeStamp</sub>
             </div>
             <div class="photo-full outer-box">
                 <div class="inner-box">
-                    <img src="../img/bungy/coffee-cup.jpg">
+                    <img src="#"/>
                 </div>
             </div>
         </div>

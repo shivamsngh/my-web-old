@@ -14,23 +14,19 @@ function _loadScripts() {
     dataScript.type = "text/javascript";
     dataScript.src = "js/data-script/data.js";
     document.getElementsByTagName("body")[0].appendChild(dataScript);
+    dataScript.onload = () => {
+        recentCardsScript.type = "text/javascript";
+        recentCardsScript.src = "js/component-script/recent-cards.js";
+        document.getElementsByTagName("body")[0].appendChild(recentCardsScript);
+        recentCardsScript.onload = () => {
+            console.log("recent sript loaded")
+            _bindRecentData();
+        }
 
-
-    recentCardsScript.type = "text/javascript";
-    recentCardsScript.src = "js/component-script/recent-cards.js";
-    document.getElementsByTagName("body")[0].appendChild(recentCardsScript);
-    recentCardsScript.onload = () => {
-        console.log("recent sript loaded")
-        _bindRecentData();
+        booksScript.type = "text/javascript";
+        booksScript.src = "js/component-script/books.js";
+        document.getElementsByTagName("body")[0].appendChild(booksScript);
     }
-
-    booksScript.type = "text/javascript";
-    booksScript.src = "js/component-script/books.js";
-    document.getElementsByTagName("body")[0].appendChild(booksScript);
-    // recentCardsScript.onload = () => {
-    //     console.log("recent sript loaded")
-    //     _bindRecentData();
-    // }
 }
 
 
