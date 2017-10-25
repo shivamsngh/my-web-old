@@ -9,7 +9,7 @@ function initializeBookModal() {
 
 
 function setCurrentlyReading(item) {
-    if (!item.read && item.read !== null) {
+    if (!item.read && item.read !== undefined) {
         $('#currentAuthor').text(`By- ${item.author}`);
         $('#currentBook').text(item.title);
         $('#currentRead').text("Currently Reading");

@@ -155,7 +155,7 @@
                         "title": "The Murder of Roger Ackroyd",
                         "myrating": 0.0,
                         "author": "Agatha Christie",
-                        "read": false
+                        "read": null
                     },
                     {
                         "title": "Breaking India: Western Interventions in Dravidian and Dalit Faultlines",
@@ -174,9 +174,13 @@
                         "myrating": 9,
                         "author": "Amish Tripathi",
                         "read": true
+                    },
+                    {
+                        "title": "The Subtle Art of Not Giving a F*ck",
+                        "myrating": 0,
+                        "author": "Mark Manson",
+                        "read": false
                     }
-        
-        
                 ],
     "listItems": [
         {
