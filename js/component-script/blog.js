@@ -48,6 +48,10 @@ function initializeBlogComponent(data, index) {
     return blogTemplate;
 }
 
+/**
+ * Swaps the photos position alternatively for effect.
+ * @param {*} blogSection 
+ */
 function swapPhotoPosition(blogSection) {
     let photo = blogSection.querySelectorAll('div.photo-full');
     let text = blogSection.querySelectorAll('div.photo-detail');
