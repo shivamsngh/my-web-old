@@ -28,7 +28,7 @@ function _bindRecentBlogData() {
     let location = document.querySelector('a#bungyloc');
     location.href = recentBlogData[0].jumpsStats[0].mapLocation;
     photoData = recentBlogData[0].jumpsStats[0].allPhotoBlogData;
-    photoData.map((data, index) => this.setBlogTemplateOnUI(this.initializeBlogComponent(data), index));
+    photoData.map((data, index) => setBlogTemplateOnUI(initializeBlogComponent(data), index));
 }
 
 function initializeBlogComponent(data, index) {

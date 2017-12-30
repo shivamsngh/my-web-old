@@ -43,7 +43,7 @@ p {
   margin-bottom: 20px;
 }
 .bg-primary {
-  background-color: #F05F40;
+  background-color: rgba(51, 122, 183, 0.6);
 }
 .bg-dark {
   background-color: #222222;
@@ -119,11 +119,11 @@ aside {
   }
   .navbar-default .nav > li > a,
   .navbar-default .nav > li > a:focus {
-    color: rgba(255, 255, 255, 0.7);
+    color: white;
   }
   .navbar-default .nav > li > a:hover,
   .navbar-default .nav > li > a:focus:hover {
-    color: white;
+    color: rgba(255, 255, 255, 0.6);
   }
   .navbar-default.affix {
     background-color: white;
@@ -155,7 +155,7 @@ header {
   background-size: cover;
   -o-background-size: cover;
   background-position: center;
-  background-image: url('../img/header.jpg');
+  background-image: url('../img/header4.webp');
   text-align: center;
   color: white;
 }
@@ -206,6 +206,7 @@ header .header-content .header-content-inner p {
     max-width: 80%;
     margin-left: auto;
     margin-right: auto;
+    font-weight: 500;
   }
 }
 .section-heading {
@@ -485,7 +486,6 @@ li.rss-item {
   position: relative;
   width: 90%;
   height: auto;
-  background-color: rgba(255, 81, 33, 0.2);
 }
 .eventtext {
   padding: 1em;

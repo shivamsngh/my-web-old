@@ -54,6 +54,14 @@ function _loadScripts() {
             const dropdiv = document.getElementById('bucketDiv');
             dropdiv.style.display = 'block';
         });
+        
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            // some code..
+            const dropdiv = document.getElementById('bucketDiv');
+            dropdiv.style.position="unset";
+            dropdiv.style.display = 'block';
+        }
+
         bucketDrop.addEventListener('mouseleave', (ev) => {
             // console.log("mouse leave");
             console.log("mouseleave event", ev.toElement);
@@ -73,10 +81,6 @@ function createDropdown() {
     const bucketElm = document.querySelector('#bucketDrop');
     const dropDiv = document.createElement('DIV');
     dropDiv.addEventListener('mouseleave', (ev) => {
-        // console.log("mouse leave");
-        // console.log("mouseleave event", ev.target);
-        // console.log("bucket element", bucketElm);
-        // console.log("comparison", ev.target === bucketElm);
         const bucketElm = document.querySelector('#bucketDiv');
         bucketElm.style.display = 'none';
     });
@@ -97,7 +101,6 @@ function loadDropdown(loc, link) {
     const bucketElm = document.querySelector('#bucketDiv');
     const newDiv = document.createElement('DIV');
     const newNode = document.createElement('A');
-
     newDiv.style.padding = '5px';
     newDiv.style.textTransform = 'uppercase';
     newDiv.style.fontWeight = '700';
@@ -106,6 +109,7 @@ function loadDropdown(loc, link) {
     newNode.style.fontSize = '13px';
     newNode.style.color = 'rgba(255, 255, 255, 1)';
     newNode.setAttribute('href', link);
+    newNode.setAttribute('class', 'page-scroll');
     newNode.setAttribute('target', '_blank');
     newNode.setAttribute('rel', 'noopener');
     newDiv.appendChild(newNode);
