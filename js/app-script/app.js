@@ -12,16 +12,16 @@ var leftFlag;
 
 function _loadScripts() {
     console.log("app script loading")
-    let dataScript = document.createElement("script");
-    let recentCardsScript = document.createElement("script");
-    let booksScript = document.createElement("script");
+    const dataScript = document.createElement("script");
+    const recentCardsScript = document.createElement("script");
+    const booksScript = document.createElement("script");
     //dropdown
     dataScript.type = "text/javascript";
-    dataScript.src = "js/data-script/data.js";
+    dataScript.src = "js/data-script/data.min.js";
     document.getElementsByTagName("body")[0].appendChild(dataScript);
     dataScript.onload = () => {
         recentCardsScript.type = "text/javascript";
-        recentCardsScript.src = "js/component-script/recent-cards.js";
+        recentCardsScript.src = "js/component-script/recent-cards.min.js";
         document.getElementsByTagName("body")[0].appendChild(recentCardsScript);
         recentCardsScript.onload = () => {
             console.log("recent sript loaded")
@@ -29,13 +29,13 @@ function _loadScripts() {
         }
 
         booksScript.type = "text/javascript";
-        booksScript.src = "js/component-script/books.js";
+        booksScript.src = "js/component-script/books.min.js";
         document.getElementsByTagName("body")[0].appendChild(booksScript);
 
-        this.createDropdown();
-        let myBucketList = this.myBucketList();
+        createDropdown();
+        let myBucketLists = myBucketList();
         console.log("mubucket", myBucketList)
-        myBucketList.map(x => {
+        myBucketLists.map(x => {
             const item = {
                 loc: x.location,
                 link: x.link
