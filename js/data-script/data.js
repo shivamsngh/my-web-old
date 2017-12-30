@@ -1,3 +1,7 @@
+/**
+ * allJsonData is available on page load and is presnt at index.html
+ */
+
 function myBooks() {
     return allJsonData.books;
 }

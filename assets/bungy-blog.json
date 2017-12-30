@@ -1,6 +1,14 @@
 {
     "events": [
         {
+            "eventName": "Speaking Session on Augmented Reality",
+            "details": "Will be speaking on the WebApps and AR at JSLovers event.",
+            "link": "https://www.meetup.com/jslovers/events/245983847",
+            "startDate": "7 Jan 2017",
+            "endDare": "7 Jan 2107",
+            "capacity": "Speaker"
+        },
+        {
             "eventName": "BUCKETLIST-JUMP",
             "details": "Will be attempting my second jump at a height of 160 mts in Nepal near China border.",
             "link": "https://www.google.co.in/maps/place/Bhotekosi+Bungee+Jump/@27.8480006,85.7331756,47999m/data=!3m1!1e3!4m8!1m2!2m1!1sbungy+nepali!3m4!1s0x0:0xae9a9e05f6d29e6d!8m2!3d27.8759936!4d85.8923149",
@@ -25,174 +33,145 @@
             "capacity": "Attendee"
         }
     ],
-    "books":  [
-        
-                    {
-                        "title": "One night at call center",
-                        "myrating": 6,
-                        "author": "Chetan Bhagat",
-                        "read": true
-                    }
-                    ,
-                    {
-                        "title": "3 Mistakes of my life",
-                        "myrating": 8,
-                        "author": "Chetan Bhagat",
-                        "read": true
-        
-                    },
-                    {
-        
-                        "title": "A roller coaster Ride",
-                        "myrating": 7,
-                        "author": "Saumil Srivastav",
-                        "read": true
-                    }
-                    ,
-                    {
-        
-                        "title": "Nothing For You My Dear Still I Love You",
-                        "myrating": 6,
-                        "author": "Arpit Dugar",
-                        "read": true
-                    }
-                    ,
-                    {
-        
-                        "title": "Harry Potter and The order of Phoenix",
-                        "myrating": 9,
-                        "author": "J.K Rowling",
-                        "read": true
-                    }
-                    ,
-                    {
-        
-                        "title": "Chanakya's Chant",
-                        "myrating": 8,
-                        "author": "Ashwin Sanghi",
-                        "read": true
-        
-                    },
-                    {
-        
-                        "title": "Immortals of Meluha",
-                        "myrating": 9,
-                        "author": "Amish Tripathi",
-                        "read": true
-                    }
-                    ,
-                    {
-        
-                        "title": "The secret of Nagas",
-                        "myrating": 8.5,
-                        "author": "Amish Tripathi",
-                        "read": true
-                    }
-                    ,
-                    {
-        
-                        "title": "The Oath of Vayuputras",
-                        "myrating": 8,
-                        "author": "Amish Tripathi",
-                        "read": true
-        
-                    },
-                    {
-        
-                        "title": "And then there were None",
-                        "myrating": 9,
-                        "author": "Agatha Christie",
-                        "read": true
-        
-                    },
-                    {
-        
-                        "title": "A Passage to India",
-                        "myrating": 9,
-                        "author": "E.M Forster",
-                        "read": true
-        
-                    },
-                    {
-        
-                        "title": "Alexander's Secret",
-                        "myrating": 9,
-                        "author": "Chrishtopher C. Doyle",
-                        "read": true
-        
-                    },
-                    {
-        
-                        "title": "The Secret of Druids",
-                        "myrating": 9,
-                        "author": "Chrishtopher C. Doyle",
-                        "read": true
-        
-                    },
-                    {
-        
-                        "title": "Pakistan Before and After Osama",
-                        "myrating": 8.5,
-                        "author": "Imtiaz Gul",
-                        "read": true
-        
-                    },
-                    {
-        
-                        "title": "Afghanistan-The Bear Trap",
-                        "myrating": 8.5,
-                        "author": "Brigadier Mohd Yusuf & Mark Adkin",
-                        "read": true
-        
-                    },
-                    {
-        
-                        "title": "And the Mountains Echoed",
-                        "myrating": 10,
-                        "author": "Khaled Hosseini",
-                        "read": true
-        
-                    },
-                    {
-                        "title": "I too had a love story",
-                        "myrating": 8.5,
-                        "author": "Ravinder Singh",
-                        "read": true
-                    },
-                    {
-                        "title": "The Murder of Roger Ackroyd",
-                        "myrating": 0.0,
-                        "author": "Agatha Christie",
-                        "read": null
-                    },
-                    {
-                        "title": "Breaking India: Western Interventions in Dravidian and Dalit Faultlines",
-                        "myrating": 0.0,
-                        "author": "Rajiv Malhotra",
-                        "read": null
-                    },
-                    {
-                        "title": "Scion of Ikshavaku",
-                        "myrating": 9,
-                        "author": "Amish Tripathi",
-                        "read": true
-                    },
-                    {
-                        "title": "Sita - Warrior of Mithila",
-                        "myrating": 9,
-                        "author": "Amish Tripathi",
-                        "read": true
-                    },
-                    {
-                        "title": "The Subtle Art of Not Giving a F*ck",
-                        "myrating": 0,
-                        "author": "Mark Manson",
-                        "read": false
-                    }
-                ],
+    "books": [
+        {
+            "title": "One night at call center",
+            "myrating": 6,
+            "author": "Chetan Bhagat",
+            "read": true
+        },
+        {
+            "title": "3 Mistakes of my life",
+            "myrating": 8,
+            "author": "Chetan Bhagat",
+            "read": true
+        },
+        {
+            "title": "A roller coaster Ride",
+            "myrating": 7,
+            "author": "Saumil Srivastav",
+            "read": true
+        },
+        {
+            "title": "Nothing For You My Dear Still I Love You",
+            "myrating": 6,
+            "author": "Arpit Dugar",
+            "read": true
+        },
+        {
+            "title": "Harry Potter and The order of Phoenix",
+            "myrating": 9,
+            "author": "J.K Rowling",
+            "read": true
+        },
+        {
+            "title": "Chanakya's Chant",
+            "myrating": 8,
+            "author": "Ashwin Sanghi",
+            "read": true
+        },
+        {
+            "title": "Immortals of Meluha",
+            "myrating": 9,
+            "author": "Amish Tripathi",
+            "read": true
+        },
+        {
+            "title": "The secret of Nagas",
+            "myrating": 8.5,
+            "author": "Amish Tripathi",
+            "read": true
+        },
+        {
+            "title": "The Oath of Vayuputras",
+            "myrating": 8,
+            "author": "Amish Tripathi",
+            "read": true
+        },
+        {
+            "title": "And then there were None",
+            "myrating": 9,
+            "author": "Agatha Christie",
+            "read": true
+        },
+        {
+            "title": "A Passage to India",
+            "myrating": 9,
+            "author": "E.M Forster",
+            "read": true
+        },
+        {
+            "title": "Alexander's Secret",
+            "myrating": 9,
+            "author": "Chrishtopher C. Doyle",
+            "read": true
+        },
+        {
+            "title": "The Secret of Druids",
+            "myrating": 9,
+            "author": "Chrishtopher C. Doyle",
+            "read": true
+        },
+        {
+            "title": "Pakistan Before and After Osama",
+            "myrating": 8.5,
+            "author": "Imtiaz Gul",
+            "read": true
+        },
+        {
+            "title": "Afghanistan-The Bear Trap",
+            "myrating": 8.5,
+            "author": "Brigadier Mohd Yusuf & Mark Adkin",
+            "read": true
+        },
+        {
+            "title": "And the Mountains Echoed",
+            "myrating": 10,
+            "author": "Khaled Hosseini",
+            "read": true
+        },
+        {
+            "title": "I too had a love story",
+            "myrating": 8.5,
+            "author": "Ravinder Singh",
+            "read": true
+        },
+        {
+            "title": "The Murder of Roger Ackroyd",
+            "myrating": 0.0,
+            "author": "Agatha Christie",
+            "read": null
+        },
+        {
+            "title": "Breaking India: Western Interventions in Dravidian and Dalit Faultlines",
+            "myrating": 0.0,
+            "author": "Rajiv Malhotra",
+            "read": null
+        },
+        {
+            "title": "Scion of Ikshavaku",
+            "myrating": 9,
+            "author": "Amish Tripathi",
+            "read": true
+        },
+        {
+            "title": "Sita - Warrior of Mithila",
+            "myrating": 9,
+            "author": "Amish Tripathi",
+            "read": true
+        },
+        {
+            "title": "The Subtle Art of Not Giving a F*ck",
+            "myrating": 9.5,
+            "author": "Mark Manson",
+            "read": false
+        }
+    ],
     "listItems": [
         {
             "name": "Bungee Jump",
+            "location": "Rishikesh, India",
+            "link":"https://shivamsngh.github.io/pages/blog.html",
             "jumpsStats": [
                 {
                     "height": "83 meters",
@@ -284,7 +263,14 @@
                     "blogFile": null
                 }
             ],
-            "completed": false
+            "completed": true
+        },
+        {
+            "name": "Bungee Jump",
+            "location": "Bhotekoshi, Nepal",
+            "link":"https://www.google.co.in/maps/place/Bhotekosi+Bungee+Jump/@27.8480006,85.7331756,47999m/data=!3m1!1e3!4m8!1m2!2m1!1sbungy+nepali!3m4!1s0x0:0xae9a9e05f6d29e6d!8m2!3d27.8759936!4d85.8923149",
+            "jumpsStats": [],
+            "completed": true
         }
     ]
 }
