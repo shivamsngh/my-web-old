@@ -107,6 +107,7 @@ function loadDropdown(loc, link) {
     newNode.style.color = 'rgba(255, 255, 255, 1)';
     newNode.setAttribute('href', link);
     newNode.setAttribute('target', '_blank');
+    newNode.setAttribute('rel', 'noopener');
     newDiv.appendChild(newNode);
     bucketElm.appendChild(newDiv, bucketElm.nextSibling);
 }

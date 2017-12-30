@@ -1,15 +1,20 @@
-var gulp = require('gulp');
-var less = require('gulp-less');
-var browserSync = require('browser-sync').create();
-var header = require('gulp-header');
-var cleanCSS = require('gulp-clean-css');
-var rename = require("gulp-rename");
-var uglify = require('gulp-uglify');
-var pkg = require('./package.json');
-let babel = require('gulp-babel');
+const gulp = require('gulp');
+const less = require('gulp-less');
+const browserSync = require('browser-sync').create();
+const header = require('gulp-header');
+const cleanCSS = require('gulp-clean-css');
+const rename = require("gulp-rename");
+const uglify = require('gulp-uglify');
+const pkg = require('./package.json');
+const babel = require('gulp-babel');
+const concat = require('gulp-concat');
+
+const jsStrings = ['js/app-script/app.js', 'js/app-script/blog-app.js', 'js/component-script/blog.js',
+    'js/component-script/books.js', 'js/component-script/recent-cards.js', 'js/creative-scripts/creative.js',
+    'js/data-script/data.js'];
 
 // Set the banner content
-var banner = ['/*!\n',
+const banner = ['/*!\n',
     ' * Start Bootstrap - <%= pkg.title %> v<%= pkg.version %> (<%= pkg.homepage %>)\n',
     ' * Copyright 2013-' + (new Date()).getFullYear(), ' <%= pkg.author %>\n',
     ' * Licensed under <%= pkg.license.type %> (<%= pkg.license.url %>)\n',
@@ -18,7 +23,7 @@ var banner = ['/*!\n',
 ].join('');
 
 // Compile LESS files from /less into /css
-gulp.task('less', function () {
+gulp.task('less', () => {
     return gulp.src('less/creative.less')
         .pipe(less())
         .pipe(header(banner, { pkg: pkg }))
@@ -27,9 +32,24 @@ gulp.task('less', function () {
             stream: true
         }))
 });
+// Minify all JS into one
+gulp.task('minify-js', () => {
+    return gulp.src(jsStrings)
+        .pipe(concat('bundle.js'))
+        .pipe(babel({ presets: ['env'] }))
+        .pipe(uglify()).on('error', function (e) {
+            console.log("injs", e);
+        })
+        .pipe(header(banner, { pkg: pkg }))
+        .pipe(rename({ suffix: '.min' }))
+        .pipe(gulp.dest('js'))
+        .pipe(browserSync.reload({
+            stream: true
+        }))
 
+})
 // Minify compiled CSS
-gulp.task('minify-css', ['less'], function () {
+gulp.task('minify-css', ['less'], () => {
     return gulp.src('css/creative.css')
         .pipe(cleanCSS({ compatibility: 'ie8' }))
         .pipe(rename({ suffix: '.min' }))
@@ -40,7 +60,7 @@ gulp.task('minify-css', ['less'], function () {
 });
 
 // Minify  app-scripts JS
-gulp.task('minify-app-js', function () {
+gulp.task('minify-app-js', () => {
     return gulp.src('js/app-script/app.js')
         .pipe(babel({ presets: ['env'] }))
         .pipe(uglify()).on('error', function (e) {
@@ -54,7 +74,7 @@ gulp.task('minify-app-js', function () {
         }))
 });
 // Minify  app-scripts JS
-gulp.task('minify-blog-app-js', function () {
+gulp.task('minify-blog-app-js', () => {
     return gulp.src('js/app-script/blog-app.js')
         .pipe(babel({ presets: ['env'] }))
         .pipe(uglify()).on('error', function (e) {
@@ -68,7 +88,7 @@ gulp.task('minify-blog-app-js', function () {
         }))
 });
 // Minify  component-scripts JS
-gulp.task('minify-blog-js', function () {
+gulp.task('minify-blog-js', () => {
     return gulp.src('js/component-script/blog.js')
         .pipe(babel({ presets: ['env'] }))
         .pipe(uglify())
@@ -80,7 +100,7 @@ gulp.task('minify-blog-js', function () {
         }))
 });
 // Minify  component-scripts JS
-gulp.task('minify-books-js', function () {
+gulp.task('minify-books-js', () => {
     return gulp.src('js/component-script/books.js')
         .pipe(babel({ presets: ['env'] }))
         .pipe(uglify()).on('error', function (e) {
@@ -95,7 +115,7 @@ gulp.task('minify-books-js', function () {
 });
 
 // Minify  component-scripts JS
-gulp.task('minify-recent-cards-js', function () {
+gulp.task('minify-recent-cards-js', () => {
     return gulp.src('js/component-script/recent-cards.js')
         .pipe(babel({ presets: ['env'] }))
         .pipe(uglify()).on('error', function (e) {
@@ -110,7 +130,7 @@ gulp.task('minify-recent-cards-js', function () {
 });
 
 // Minify  creative-scripts JS
-gulp.task('minify-creative-js', function () {
+gulp.task('minify-creative-js', () => {
     return gulp.src('js/creative-scripts/creative.js')
         .pipe(babel({ presets: ['env'] }))
         .pipe(uglify()).on('error', function (e) {
@@ -125,7 +145,7 @@ gulp.task('minify-creative-js', function () {
 });
 
 // Minify  data-scripts JS
-gulp.task('minify-data-js', function () {
+gulp.task('minify-data-js', () => {
     return gulp.src('js/data-script/data.js')
         .pipe(babel({ presets: ['env'] }))
         .pipe(uglify()).on('error', function (e) {
@@ -140,7 +160,7 @@ gulp.task('minify-data-js', function () {
 });
 
 // Copy vendor libraries from /node_modules into /vendor
-gulp.task('copy', function () {
+gulp.task('copy', () => {
     gulp.src(['node_modules/bootstrap/dist/**/*', '!**/npm.js', '!**/bootstrap-theme.*', '!**/*.map'])
         .pipe(gulp.dest('vendor/bootstrap'))
 
@@ -168,7 +188,7 @@ gulp.task('copy', function () {
 gulp.task('default', ['less', 'minify-css', 'minify-app-js', 'minify-creative-js', 'minify-data-js', 'minify-recent-cards-js', 'minify-books-js', 'minify-blog-app-js', 'minify-blog-js', 'copy']);
 
 // Configure the browserSync task
-gulp.task('browserSync', function () {
+gulp.task('browserSync', () => {
     browserSync.init({
         server: {
             baseDir: ''
@@ -177,7 +197,7 @@ gulp.task('browserSync', function () {
 })
 
 // Dev task with browserSync
-gulp.task('dev', ['browserSync', 'less', 'minify-css'], function () {
+gulp.task('dev', ['browserSync', 'less', 'minify-css'], () => {
     gulp.watch('less/*.less', ['less']);
     gulp.watch('css/*.css', ['minify-css']);
     // gulp.watch('js/*/*.js', ['minify-js']);

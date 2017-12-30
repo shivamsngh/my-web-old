@@ -12,7 +12,7 @@ function initializeRecentComponent(data) {
     let textFooter = recentTemplate.content.querySelectorAll('sub');
     textHeader[0].innerHTML = data.eventName;
     textBody[0].innerHTML = data.details;
-    textFooter[0].innerHTML = `<a href='${data.link}' class='btn btn-xs' target='_blank'>Details</a>`;
+    textFooter[0].innerHTML = `<a href='${data.link}' class='btn btn-xs' target="_blank" rel="noopener">Details</a>`;
     // callback(recentTemplate);
     return recentTemplate;
 }

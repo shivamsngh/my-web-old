@@ -4,13 +4,13 @@ function _loadScripts() {
     let blogScript = document.createElement("script");
 
     dataScript.type = "text/javascript";
-    dataScript.src = "../js/data-script/data.js";
+    dataScript.src = "../js/data-script/data.min.js";
     document.getElementsByTagName("body")[0].appendChild(dataScript);
     
     dataScript.onload = () => {
         console.log("datascriptloaded");
         blogScript.type = "text/javascript";
-        blogScript.src = "../js/component-script/blog.js";
+        blogScript.src = "../js/component-script/blog.min.js";
         document.getElementsByTagName("body")[0].appendChild(blogScript);
         blogScript.onload = () => {
             console.log("recent blog script loaded")
