@@ -24,7 +24,9 @@
     "scrollreveal": "^3.1.4"
   },
   "repository": "https://github.com/shivamsngh/shivamsngh.github.io.git",
-  "dependencies": {},
+  "dependencies": {
+    "webpack": "^3.10.0"
+  },
   "description": "Shivam Singh, Personal WebSite",
   "main": "index.html"
 }
