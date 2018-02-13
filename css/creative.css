@@ -1,6 +1,6 @@
 /*!
  * Start Bootstrap - My Web v1.0.0 (http://shivamsngh.github.io)
- * Copyright 2013-2017 Shivam Singh
+ * Copyright 2013-2018 Shivam Singh
  * Licensed under  ()
  */
 html,
@@ -155,7 +155,7 @@ header {
   background-size: cover;
   -o-background-size: cover;
   background-position: center;
-  background-image: url('../img/header4.webp');
+  background-image: url('../img/header4.png');
   text-align: center;
   color: white;
 }
