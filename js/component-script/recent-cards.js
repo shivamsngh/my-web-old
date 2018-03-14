@@ -9,10 +9,10 @@ function initializeRecentComponent(data) {
     let recentTemplate = document.querySelector('#recents');
     let textHeader = recentTemplate.content.querySelectorAll('h4');
     let textBody = recentTemplate.content.querySelectorAll('p');
-    let textFooter = recentTemplate.content.querySelectorAll('sub');
+    let textFooter = recentTemplate.content.querySelectorAll('div.recent-card-footer');
     textHeader[0].innerHTML = data.eventName;
     textBody[0].innerHTML = data.details;
-    textFooter[0].innerHTML = `<a href='${data.link}' class='btn btn-xs' target="_blank" rel="noopener">Details</a>`;
+    textFooter[0].innerHTML = `<span>${data.startDate}</span> <a href='${data.link}' class='btn btn-xs' target="_blank" rel="noopener">Details</a>`;
     // callback(recentTemplate);
     return recentTemplate;
 }
